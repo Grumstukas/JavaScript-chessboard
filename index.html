@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Šachmatų lentos kordinačių problema:</h2>
+
+<p id="demo"></p>
+
+<script>
+
+var eilute = 8;
+var stulpelis = 6;
+var paspaustas = 33;
+
+var x = ( (paspaustas % stulpelis) - 1 );
+var y = Math.trunc(paspaustas / stulpelis);
+
+document.getElementById("demo").innerHTML =
+"langelio " + paspaustas + " kordinatės yra " + ': ( '+x+'; '+y+' )' ;
+
+</script>
+
+</body>
+</html>

@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Šachmatų lenta</title>
+</head>
 <body>
-
-<h2>Šachmatų lentos kordinačių problema:</h2>
-
-<p id="demo"></p>
-
-<script>
-
-var eilute = 8;
-var stulpelis = 8;
-var paspaustas = 50;
-
-var x = ( (paspaustas % stulpelis) - 1 );
-var y = Math.trunc(paspaustas / stulpelis);
-
-document.getElementById("demo").innerHTML =
-"Langelio " + paspaustas + " kordinatės yra " + ': ( '+x+'; '+y+' )' ;
-
-</script>
+    <div>
+        <h1>Šachmatų lentos kordinačių problema:</h1>
+        <p>Prašau pasirinkite kiek eilučių ir kiek stulpelių turės nauja šachmatų lenta.</p>
+        <form>
+            <label for="number">Stulpelių skaičius:</label>
+            <input id="columns" type="number" required>
+            <label for="number">Eilučių skaičius:</label>
+            <input id="rows" type="number" required>
+            <label for="number">Nežinomas langelis:</label>
+            <input id="index" type="number" required>
+            <button type="button" onclick="myFunction()">Submit</button>
+        </form>
+        <p id="demo"></p>
+    </div>
+<script src="js/actions.js"></script>
 
 </body>
 </html>

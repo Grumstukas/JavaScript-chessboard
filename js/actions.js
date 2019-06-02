@@ -23,20 +23,21 @@ function myFunction() {
         document.getElementById("demo").innerHTML =
     "Eilutės šachmatų lentoje skaičiuojami teigiamais skaičiais :), skaičius kurį įvedei - neteisingas"
     } 
-    else if (index < 0 ){
-        document.getElementById("demo").innerHTML =
-    "Tokio langelio lentoje tikrai nėra :)"}
+    else if (index < 1 ){
+        document.getElementById("demo").innerHTML = "Tokio langelio lentoje tikrai nėra :)"}
+
     else if (document.getElementById('index').value === '')
-    {document.getElementById("demo").innerHTML =
-    "Tai kokio langelio koordinates norėtum sužinoti ???"}
+    {document.getElementById("demo").innerHTML = "Tai kokio langelio koordinates norėtum sužinoti ???"}
 else {
-  if ( (index % columns) > 0 ){
-      var x = ( (index % columns) - 1 );}
-      else {
-      var x = (columns - 1);}
-  
-  var y = Math.floor((index - x) / columns);
-  
+    if ( (index % columns) > 0 ){
+        var x = ( (index % columns) - 1 );}
+        else {
+        var x = (columns - 1);}
+    if ( (index * columns * rows) < 2 ){
+        var y = 0 ;}
+        else {
+        var y = Math.floor((index - x) / columns);}
+
   if( index > (rows * columns)){
       document.getElementById("demo").innerHTML =
   "Langelio koordinačių nustatyti negalima, nes ieškomo langelio lentoje tiesiog nėra. Bandyk dar kartą ;)" 

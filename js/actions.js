@@ -4,16 +4,14 @@ function myFunction() {
   var rows = document.getElementById("rows").value;
   var columns = document.getElementById("columns").value;
   var index = document.getElementById("index").value;
-  // var rows = 10;
-  // var columns = 8;
-  // var index = 81;
+
   if((document.getElementById('columns').value === '') && (document.getElementById('rows').value === ''))
   {document.getElementById("demo").innerHTML =
 "Būk geras, įrašyk ką nors, nes be duomenų nieko suskaičiuoti negaliu. Ačiū :)"}
 
     else if ((columns < 1) && (rows < 1 )) {
         document.getElementById("demo").innerHTML =
-    "Stulpeliai ir eilutės šachmatų lentoje skaičiuojami teigiamais skaičiais :), skaičiai kurį įvedei - neteisingi"
+    "Stulpeliai ir eilutės šachmatų lentoje skaičiuojami teigiamais skaičiais :), skaičiai kuriuos įvedei - neteisingi"
     } 
     else if (columns < 1) {
         document.getElementById("demo").innerHTML =

@@ -26,7 +26,7 @@ div{
     h1{
         display: inline-block;
         width: 100%;
-        font-size: 50px;
+        font-size: 40px;
         padding: 30px 10px 10px;
     }
     form{
@@ -44,12 +44,12 @@ div{
         button{
             display: inline-block;
             width: 50%;
-            margin-top: 30px;
+            margin-top: 20px;
             padding: 10px 20px;
         }
     p{  
         display: inline-block;
         width: 100%;
-        font-size: 30px;
+        font-size: 25px;
         padding: 10px 10px;
     }

@@ -31,7 +31,7 @@ else {
         var x = ( (index % columns) - 1 );}
         else {
         var x = (columns - 1);}
-    if ( (index * columns * rows) < 2 ){
+    if ( (index * columns * rows) == 1 ){
         var y = 0 ;}
         else {
         var y = Math.floor((index - x) / columns);}

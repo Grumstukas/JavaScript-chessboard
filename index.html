@@ -13,11 +13,11 @@
         <p>Prašau pasirinkite kiek eilučių ir kiek stulpelių turės nauja šachmatų lenta.</p>
         <form>
             <label for="number">Stulpelių skaičius:</label>
-            <input id="columns" type="number" required>
+            <input id="columns" type="number" min="0" step="1" required>
             <label for="number">Eilučių skaičius:</label>
-            <input id="rows" type="number" required>
+            <input id="rows" type="number" min="0" step="1" required>
             <label for="number">Nežinomas langelis:</label>
-            <input id="index" type="number" required>
+            <input id="index" type="number" min="0" step="1" required>
             <button type="button" onclick="myFunction()">Submit</button>
         </form>
         <p id="demo"></p>

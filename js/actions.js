@@ -4,6 +4,7 @@ function myFunction() {
   var rows = document.getElementById("rows").value;
   var columns = document.getElementById("columns").value;
   var index = document.getElementById("index").value;
+  var z = rows * columns;
 
   if((document.getElementById('columns').value === '') && (document.getElementById('rows').value === ''))
   {document.getElementById("demo").innerHTML =
@@ -11,18 +12,25 @@ function myFunction() {
 
     else if ((columns < 1) && (rows < 1 )) {
         document.getElementById("demo").innerHTML =
-    "Stulpeliai ir eilutės šachmatų lentoje skaičiuojami teigiamais skaičiais :), skaičiai kuriuos įvedei - neteisingi"
+    "Stulpeliai ir eilutės šachmatų lentoje skaičiuojami sveikais teigiamais skaičiais :), skaičiai kuriuos įvedei - neteisingi"
     } 
-    else if (columns < 1) {
+    else if (((columns % 1) > 0) && ((rows % 1) > 0)) {
         document.getElementById("demo").innerHTML =
-    "Stulpeliai šachmatų lentoje skaičiuojami teigiamais skaičiais :), skaičius kurį įvedei - neteisingas"
+    "Stulpeliai ir eilutės šachmatų lentoje skaičiuojami sveikais teigiamais skaičiais :), skaičiai kuriuos įvedei - neteisingi"
     } 
-    else if (rows < 1 ){
+    else if ((columns < 1) || ((columns % 1) > 0)) {
         document.getElementById("demo").innerHTML =
-    "Eilutės šachmatų lentoje skaičiuojami teigiamais skaičiais :), skaičius kurį įvedei - neteisingas"
+    "Stulpeliai šachmatų lentoje skaičiuojami sveikais teigiamais skaičiais :), skaičius kurį įvedei - neteisingas"
     } 
-    else if (index < 1 ){
-        document.getElementById("demo").innerHTML = "Tokio langelio lentoje tikrai nėra :)"}
+    else if ((rows < 1 ) || ((rows % 1) > 0)) {
+        document.getElementById("demo").innerHTML =
+    "Eilutės šachmatų lentoje skaičiuojami sveikais teigiamais skaičiais :), skaičius kurį įvedei - neteisingas"
+    } 
+    else if ((index % 1) > 0 ) {
+        document.getElementById("demo").innerHTML = "Ieškomas langelis turėtų būti sveikas teigiamas skaičius (nuo 1 iki  " + z + ") :)"}
+    
+    else if (index < 1 ) {
+        document.getElementById("demo").innerHTML = "Tokio langelio lentoje tikrai nėra :) Pamėgink šiose ribose : (nuo 1 iki  " + z + ") :)"}  
 
     else if (document.getElementById('index').value === '')
     {document.getElementById("demo").innerHTML = "Tai kokio langelio koordinates norėtum sužinoti ???"}
